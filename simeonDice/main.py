@@ -17,6 +17,7 @@ pygame.init()
 
 
 def juego():
+    listaBotones = []
     diccionarioColor = {"verde": [0, 255, 0], "rojo": [255, 0, 0], "amarillo": [255, 255, 0], "azul": [0, 0, 255]}
     diccionarioposicion = {"verde": (200, 150, 100, 120), "rojo": (100, 30, 100, 120), "amarillo": (200, 30, 100, 120),
                            "azul": (100, 150, 100, 120)}
@@ -72,8 +73,5 @@ while True:
     pygame.draw.rect(pantalla, verdeEncendido, verde, 0)
     pygame.draw.rect(pantalla, azulEncendido, azul, 0)
     pygame.draw.rect(pantalla, amarilloEncendido, amarillo, 0)
-    if listaBotones == listaGlobal:
-        juego()
-        listaBotones = []
     pygame.display.flip()
     relojito.tick(0.5)
